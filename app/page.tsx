@@ -1,0 +1,58 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import { ArrowDownRight, ArrowUpRight, Menu, MoveUpRight, X } from 'lucide-react'
+
+const projects = [
+  { id: '01', name: 'MindCare.AI', type: 'AI wellness platform', year: '2025', tags: 'Flutter · FastAPI · MongoDB · LangChain', description: 'An AI-powered conversational platform combining structured assessments, conversational AI, sentiment analysis, and personalized recommendations.', tone: 'blue' },
+  { id: '02', name: 'Digital Darzi', type: 'Business management', year: '2024', tags: 'Flutter · Hive · Provider · Local Storage', description: 'A practical business management application for customer records, measurements, orders, delivery reminders, and reporting.', tone: 'paper' },
+  { id: '03', name: 'PharmaStream ERP', type: 'Offline-first desktop app', year: '2024', tags: 'Python · SQLite · CustomTkinter · PyInstaller', description: 'A desktop pharmacy ERP designed for inventory, barcode POS, reports, alerts, users, and offline-first operation.', tone: 'grid' },
+  { id: '04', name: 'AI Jobs Finder', type: 'Intelligent matching', year: '2024', tags: 'Next.js · Django · DRF · AI', description: 'A system designed to analyze candidate profiles and match them with relevant opportunities.', tone: 'mono' },
+]
+
+const stack = [
+  ['AI / Machine Learning', 'Python', 'Generative AI', 'RAG', 'LangChain', 'Vector Databases', 'Embeddings', 'AI Agents'],
+  ['Backend', 'Django', 'Django REST Framework', 'FastAPI', 'REST APIs', 'PostgreSQL', 'Supabase'],
+  ['Frontend', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML / CSS'],
+  ['Infrastructure', 'Docker', 'AWS', 'Vercel', 'Railway', 'Git', 'GitHub'],
+]
+
+function SystemOrb() {
+  return <div className="system-orb" aria-label="Abstract visualization of connected AI systems"><div className="orb-ring ring-a" /><div className="orb-ring ring-b" /><div className="orb-ring ring-c" /><div className="orb-core"><span>AI</span><i /></div>{Array.from({ length: 12 }).map((_, i) => <b className={`orb-node node-${i + 1}`} key={i} />)}<span className="orb-label label-a">retrieval</span><span className="orb-label label-b">/vector</span><span className="orb-label label-c">generate()</span></div>
+}
+
+function Header({ open, setOpen }: { open: boolean; setOpen: (value: boolean) => void }) {
+  return <header className="site-header"><a href="#top" className="brand">SA<span>•</span></a><nav className="desktop-nav"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a></nav><a className="header-talk" href="mailto:sahibzadaabdullah8@gmail.com">Let&apos;s talk <ArrowUpRight size={15} /></a><button className={`menu-toggle ${open ? 'is-open' : ''}`} onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open}>{open ? <X size={18} /> : <Menu size={18} />}</button></header>
+}
+
+export default function Page() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [selected, setSelected] = useState<(typeof projects)[number] | null>(null)
+  useEffect(() => { document.body.style.overflow = menuOpen || selected ? 'hidden' : ''; return () => { document.body.style.overflow = '' } }, [menuOpen, selected])
+  return <main id="top" className="portfolio"><Header open={menuOpen} setOpen={setMenuOpen} />
+    <section className="hero section-grid"><div className="hero-copy"><p className="eyebrow">AI ENGINEER <span>·</span> FULL STACK DEVELOPER</p><h1>I build<br /><em>intelligent</em><br />digital products<span className="period">.</span></h1><p className="hero-intro">I design and engineer AI-powered applications, scalable backends, intelligent search systems, and modern digital experiences.</p><div className="hero-actions"><a className="button button-light" href="#work">Explore my work <ArrowDownRight size={16} /></a><a className="text-link" href="mailto:sahibzadaabdullah8@gmail.com">Let&apos;s talk <ArrowUpRight size={15} /></a></div><p className="availability"><span /> Available for selected opportunities</p></div><div className="hero-visual"><SystemOrb /><div className="visual-caption"><span>01 / 04</span><span>Systems in motion</span></div></div><div className="scroll-cue"><span>Scroll to explore</span><ArrowDownRight size={15} /></div></section>
+
+    <section className="statement section-grid"><p className="section-kicker">/ 01 — A point of view</p><div><h2>I don&apos;t just<br />write <em>code.</em></h2><h2 className="statement-secondary">I engineer systems<br />that solve real problems.</h2><p className="body-copy">My work spans Generative AI, RAG systems, backend engineering, APIs, databases, cloud deployment, and modern frontend applications.</p></div></section>
+
+    <section id="skills" className="skills section-grid"><div className="section-heading"><p className="section-kicker">/ 02 — Toolkit</p><h2>The tools<br />behind the <em>work.</em></h2></div><div className="stack-list">{stack.map(([category, ...items]) => <div className="stack-row" key={category}><p>{category}</p><div>{items.map(item => <span key={item}>{item}</span>)}</div></div>)}</div></section>
+
+    <section id="work" className="work section-grid"><div className="work-intro"><p className="section-kicker">/ 03 — Selected work</p><h2>Built for<br /><em>real life.</em></h2><p className="body-copy">A selection of products, experiments, and systems built from architecture to deployment.</p></div><div className="project-list">{projects.map((project, index) => <button className="project-item" key={project.id} onClick={() => setSelected(project)}><div className={`project-art art-${project.tone}`}><span className="art-index">{project.id}</span><span className="art-mark">{index === 0 ? '∿' : index === 1 ? '▱' : index === 2 ? '⊞' : '◎'}</span><span className="art-grid-label">{project.type}</span></div><div className="project-meta"><div><span className="project-number">{project.id}</span><h3>{project.name}</h3><p>{project.description}</p></div><div className="project-side"><span>{project.year}</span><span>{project.tags}</span><MoveUpRight size={18} /></div></div></button>)}</div></section>
+
+    <section className="architecture"><div className="architecture-head section-grid"><div><p className="section-kicker">/ 04 — AI engineering</p><h2>Beyond the<br /><em>interface.</em></h2></div><p className="body-copy">I build the systems behind intelligent products — where data, models, and thoughtful software meet.</p></div><div className="pipeline"><div className="pipeline-line" />{['User', 'Application', 'API', 'AI / RAG Layer', 'Vector Database', 'LLM', 'Response'].map((item, i) => <div className="pipeline-node" key={item}><span className="pipeline-dot">{String(i + 1).padStart(2, '0')}</span><strong>{item}</strong><small>{['input', 'experience', 'orchestration', 'context + tools', 'embeddings', 'generation', 'output'][i]}</small></div>)}</div><div className="architecture-tags">{['Prompt engineering', 'Embeddings', 'Retrieval', 'Reranking', 'Context', 'Generation', 'Evaluation'].map(tag => <span key={tag}>{tag}</span>)}</div></section>
+
+    <section id="experience" className="experience section-grid"><p className="section-kicker">/ 05 — Experience</p><div><h2>Where ideas<br />meet <em>systems.</em></h2><div className="timeline"><div className="timeline-item"><span className="timeline-dot" /><p className="timeline-date">AUG 2025 — PRESENT</p><h3>Machine Learning Engineer</h3><h4>Data Function Inc <span>— Canada · Remote</span></h4><p className="timeline-copy">Prompt optimization and engineering, RAG systems, OpenSearch, Pinecone, vector databases, Django APIs, and AI-powered backend systems.</p><div className="timeline-tags"><span>RAG</span><span>OpenSearch</span><span>Django</span><span>Vector databases</span></div></div><div className="timeline-item education"><span className="timeline-dot" /><p className="timeline-date">2025</p><h3>Bachelor of Science in Computer Science</h3><h4>University of Engineering and Technology, Peshawar</h4></div></div></div></section>
+
+    <section className="process section-grid"><p className="section-kicker">/ 06 — Process</p><div><h2>How I <em>build.</em></h2><div className="process-grid">{[['01', 'Understand', 'The problem, users, constraints, and desired outcome.'], ['02', 'Architect', 'The system, data flow, APIs, AI components, and infrastructure.'], ['03', 'Build', 'The product with clean, scalable, and maintainable code.'], ['04', 'Deploy', 'Test, optimize, deploy, monitor, and continuously improve.']].map(([n, title, text]) => <div className="process-step" key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p><ArrowUpRight size={17} /></div>)}</div></div></section>
+
+    <section id="about" className="about section-grid"><div className="about-monogram">SA<span>+</span></div><div><p className="section-kicker">/ 07 — About</p><h2>Engineer by discipline.<br /><em>Builder by nature.</em></h2><p className="about-copy">I&apos;m Sahibzada Abdullah Ahmad, an AI Engineer and Full Stack Developer focused on building practical software products powered by modern AI.</p><p className="about-copy">My work sits between intelligent systems and real-world applications — from RAG pipelines and AI assistants to scalable APIs, business software, and modern web experiences.</p><a className="text-link" href="https://github.com" target="_blank" rel="noreferrer">More on GitHub <ArrowUpRight size={15} /></a></div></section>
+
+    <section className="contact"><div className="contact-inner"><p className="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s build<br /><em>something intelligent.</em></h2><p>Whether you&apos;re building an AI product, a SaaS platform, or a complex backend system, I&apos;d love to hear what you&apos;re working on.</p><a className="button button-light" href="mailto:sahibzadaabdullah8@gmail.com">Email me <ArrowUpRight size={16} /></a><div className="contact-links"><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:sahibzadaabdullah8@gmail.com">sahibzadaabdullah8@gmail.com</a></div></div></section>
+
+    <footer><div className="footer-name">ABDULLAH</div><div className="footer-bottom"><span>AI Engineer<br />Full Stack Developer<br />Pakistan</span><span>© 2026 Sahibzada Abdullah Ahmad</span><span>Back to top <a href="#top">↑</a></span></div></footer>
+    {menuOpen && <div className="nav-overlay"><p className="eyebrow">Navigation / 00</p>{[['01', 'Work', '#work'], ['02', 'Experience', '#experience'], ['03', 'Skills', '#skills'], ['04', 'About', '#about'], ['05', 'Contact', '#contact']].map(([n, label, href]) => <a href={href} onClick={() => setMenuOpen(false)} key={label}><span>{n}</span>{label}<ArrowUpRight size={24} /></a>)}</div>}
+    {selected && <div className="project-modal" role="dialog" aria-modal="true"><button className="modal-close" onClick={() => setSelected(null)} aria-label="Close project details"><X /></button><div className={`modal-art art-${selected.tone}`}><span>{selected.id}</span><strong>{selected.name}</strong></div><p className="section-kicker">{selected.type} / {selected.year}</p><h2>{selected.name}</h2><p className="modal-description">{selected.description}</p><div className="modal-details"><span>Technology</span><strong>{selected.tags}</strong></div><a className="text-link" href="https://github.com" target="_blank" rel="noreferrer">View project on GitHub <ArrowUpRight size={15} /></a></div>}
+  </main>
+}
+
+type Project = (typeof projects)[number]
+void ({} as Project)
