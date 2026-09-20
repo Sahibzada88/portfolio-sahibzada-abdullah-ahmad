@@ -5,8 +5,9 @@ export type Project = {
   year: string
   tags: string
   description: string
-  tone: 'blue' | 'paper' | 'grid' | 'mono'
+  tone: 'blue' | 'paper' | 'grid' | 'mono' | 'emerald'
   link: string
+  websiteLink: string
   image: string
 }
 
@@ -28,8 +29,9 @@ export const projects: Project[] = [
     description: 'A full-stack multi-branch pharmacy ERP with role-based dashboards for owners, cashiers, pharmacists and accountants — covering POS, inventory with expiry/FEFO tracking, suppliers, finance, and real-time analytics powered by Postgres stored procedures.',
     tone: 'emerald',
     link: 'https://github.com/Sahibzada88/Pharmacy-erp-backend',
+    websiteLink: '',
     image: 'https://drive.google.com/file/d/1gWQyBM9sPy6gMwtvShjXUNBpyMncAPep/view?usp=sharing',
-  }, 
+  },
   {
     id: '02',
     name: 'Digital Darzi',
@@ -39,6 +41,7 @@ export const projects: Project[] = [
     description: 'A practical business management application for customer records, measurements, orders, delivery reminders, and reporting.',
     tone: 'paper',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
   {
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     description: 'A desktop pharmacy ERP designed for inventory, barcode POS, reports, alerts, users, and offline-first operation.',
     tone: 'grid',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
   {
@@ -61,6 +65,7 @@ export const projects: Project[] = [
     description: 'A system designed to analyze candidate profiles and match them with relevant opportunities.',
     tone: 'mono',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
 ]
@@ -73,5 +78,5 @@ export const certifications: Certification[] = [
 export function getDriveImageUrl(url: string) {
   if (!url) return ''
   const match = url.match(/\/file\/d\/([^/]+)/) || url.match(/[?&]id=([^&]+)/)
-  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url
+  return match ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1600` : url
 }
