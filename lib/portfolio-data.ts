@@ -62,7 +62,7 @@ export const projects: Project[] = [
   type: 'Healthcare portfolio and appointment booking',
   year: '2026',
   tags: 'Next.js · TypeScript · Neon · Better Auth · Three.js',
-  description: 'A premium cardiology website featuring patient appointment booking, manual call-confirmation workflows, an admin dashboard, heart-health articles, and an interactive heart explorer.',
+  description: 'A high quality and premium cardiology website featuring patient appointment booking, manual call-confirmation workflows, an admin dashboard, heart-health articles, and an interactive heart explorer.',
   tone: 'serif',
   link: 'https://github.com/Sahibzada88/cardiologist-portfolio-website',
   websiteLink: 'https://cardiologist-portfolio-website.vercel.app',
