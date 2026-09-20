@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: 'A full-stack multi-branch pharmacy ERP with role-based dashboards for owners, cashiers, pharmacists and accountants — covering POS, inventory with expiry/FEFO tracking, suppliers, finance, and real-time analytics powered by Postgres stored procedures.',
     tone: 'emerald',
     link: 'https://github.com/Sahibzada88/Pharmacy-erp-backend',
-    websiteLink: 'https://pharmacy-erp-frontend-ten.vercel.app/',
+    websiteLink: '',
     image: 'https://drive.google.com/file/d/1gWQyBM9sPy6gMwtvShjXUNBpyMncAPep/view?usp=sharing',
   },
   {
