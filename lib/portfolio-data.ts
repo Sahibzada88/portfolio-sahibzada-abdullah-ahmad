@@ -5,7 +5,7 @@ export type Project = {
   year: string
   tags: string
   description: string
-  tone: 'blue' | 'paper' | 'grid' | 'mono'
+  tone: 'blue' | 'paper' | 'grid' | 'mono' | 'emerald'
   link: string
   websiteLink: string
   image: string
@@ -22,15 +22,15 @@ export type Certification = {
 export const projects: Project[] = [
   {
     id: '01',
-    name: 'MindCare.AI',
-    type: 'AI wellness platform',
-    year: '2025',
-    tags: 'Flutter · FastAPI · MongoDB · LangChain',
-    description: 'An AI-powered conversational platform combining structured assessments, conversational AI, sentiment analysis, and personalized recommendations.',
-    tone: 'blue',
-    link: 'https://github.com',
+    name: 'Rahat Pharmacy ERP',
+    type: 'Pharmacy chain management platform',
+    year: '2026',
+    tags: 'Next.js · Django REST Framework · PostgreSQL · Supabase',
+    description: 'A full-stack multi-branch pharmacy ERP with role-based dashboards for owners, cashiers, pharmacists and accountants — covering POS, inventory with expiry/FEFO tracking, suppliers, finance, and real-time analytics powered by Postgres stored procedures.',
+    tone: 'emerald',
+    link: 'https://github.com/Sahibzada88/Pharmacy-erp-backend',
     websiteLink: '',
-    image: '',
+    image: 'https://drive.google.com/file/d/1gWQyBM9sPy6gMwtvShjXUNBpyMncAPep/view?usp=sharing',
   },
   {
     id: '02',
