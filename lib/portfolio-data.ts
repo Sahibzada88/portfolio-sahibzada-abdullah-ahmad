@@ -7,6 +7,7 @@ export type Project = {
   description: string
   tone: 'blue' | 'paper' | 'grid' | 'mono'
   link: string
+  websiteLink: string
   image: string
 }
 
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     description: 'An AI-powered conversational platform combining structured assessments, conversational AI, sentiment analysis, and personalized recommendations.',
     tone: 'blue',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
   {
@@ -39,6 +41,7 @@ export const projects: Project[] = [
     description: 'A practical business management application for customer records, measurements, orders, delivery reminders, and reporting.',
     tone: 'paper',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
   {
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     description: 'A desktop pharmacy ERP designed for inventory, barcode POS, reports, alerts, users, and offline-first operation.',
     tone: 'grid',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
   {
@@ -61,6 +65,7 @@ export const projects: Project[] = [
     description: 'A system designed to analyze candidate profiles and match them with relevant opportunities.',
     tone: 'mono',
     link: 'https://github.com',
+    websiteLink: '',
     image: '',
   },
 ]
@@ -73,5 +78,5 @@ export const certifications: Certification[] = [
 export function getDriveImageUrl(url: string) {
   if (!url) return ''
   const match = url.match(/\/file\/d\/([^/]+)/) || url.match(/[?&]id=([^&]+)/)
-  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url
+  return match ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1600` : url
 }
