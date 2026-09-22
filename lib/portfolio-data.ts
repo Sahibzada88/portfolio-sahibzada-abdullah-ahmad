@@ -5,7 +5,7 @@ export type Project = {
   year: string
   tags: string
   description: string
-  tone: 'blue' | 'paper' | 'grid' | 'mono' | 'emerald'
+  tone: 'blue' | 'paper' | 'grid' | 'mono' | 'emerald' | 'serif'
   link: string
   websiteLink: string
   image: string
