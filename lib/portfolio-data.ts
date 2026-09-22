@@ -84,9 +84,85 @@ export const projects: Project[] = [
 
 // Add your certifications here. They automatically appear in the Certifications section.
 export const certifications: Certification[] = [
-  // { name: 'Certification name', issuer: 'Issuing organization', year: '2025', link: 'https://...' },
+  {
+    name: 'Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization',
+    issuer: 'DeepLearning.AI',
+    year: '2025',
+    link: 'https://drive.google.com/file/d/1s-tZ9iQigI4sJebccZq3ArrRDh6JlAjb/view?usp=sharing',
+  },
+  {
+    name: 'Natural Language Processing with Classification and Vector Spaces',
+    issuer: 'DeepLearning.AI',
+    year: '2025',
+    link: 'https://drive.google.com/file/d/1SXekoFNrV9YgmuiLXmuCPfM7sBRtxhey/view?usp=sharing',
+  },
+  {
+    name: 'Convolutional Neural Networks',
+    issuer: 'DeepLearning.AI',
+    year: '2025',
+    link: 'https://drive.google.com/file/d/1ke4bvzyY8MQWFrvl2w_Ll1hVVu5GQmm4/view?usp=sharing',
+  },
+  {
+    name: 'Neural Networks and Deep Learning',
+    issuer: 'DeepLearning.AI',
+    year: '2025',
+    link: 'https://drive.google.com/file/d/1kjXEVJVajDib4x8GQHtOy-R6wq3WrZ1O/view?usp=sharing',
+  },
+  {
+    name: 'AI For Everyone',
+    issuer: 'DeepLearning.AI',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1Kcti-oNCyBkJqJunIMa-9H0866yI8CkB/view?usp=sharing',
+  },
+  {
+    name: 'Data Analysis with Python',
+    issuer: 'freeCodeCamp',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1QZ43xq3EsLld1upgfKMrZ0m88XNqGm8p/view?usp=sharing',
+  },
+  {
+    name: 'Machine Learning with Python',
+    issuer: 'freeCodeCamp',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1bPycU3oIYduGIe5RSPTaDl1kUdOOqwpP/view?usp=sharing',
+  },
+  {
+    name: 'Introduction to Flutter Course',
+    issuer: 'Simplilearn',
+    year: '2024',
+    link: '[link removed]',
+  },
+  {
+    name: 'Career Essentials in Generative AI',
+    issuer: 'Microsoft and LinkedIn',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1qeK-cyED-wrdmFtUTxP277W9vQzK17zp/view?usp=sharing',
+  },
+  {
+    name: 'Introduction to Artificial Intelligence (2023)',
+    issuer: 'LinkedIn Learning',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1tFGS-KBW-zneqc7Bf2qSpKQBth1bfHyu/view?usp=sharing',
+  },
+  {
+    name: 'Ethics in the Age of Generative AI',
+    issuer: 'LinkedIn Learning',
+    year: '2024',
+    link: 'https://drive.google.com/file/d/1IaaopKj0bwx0YQ_rZkXTzXk8nC-ot1Yz/view?usp=sharing',
+  },
+  {
+    name: 'Certified Python Developer',
+    issuer: 'W3Schools',
+    year: '2021',
+    link: 'https://drive.google.com/file/d/1E1TBpacK-pEINGu7JxMbFrsVN1HRYZpY/view?usp=sharing',
+  },
+  {
+    name: 'AI/ML Internship Experience Certificate',
+    issuer: 'HelioCore Solutions',
+    year: '2025',
+    link: 'https://drive.google.com/file/d/1CbxHTzjQS-FEofPejFdpEgAYOeLL09I6/view?usp=sharing',
+  },
 ]
-
 export function getDriveImageUrl(url: string) {
   if (!url) return ''
   const match = url.match(/\/file\/d\/([^/]+)/) || url.match(/[?&]id=([^&]+)/)
