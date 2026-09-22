@@ -5,9 +5,9 @@ import { ArrowDownRight, ArrowUpRight, Menu, MoveUpRight, X } from 'lucide-react
 import { certifications, getDriveImageUrl, projects } from '@/lib/portfolio-data'
 
 const stack = [
-  ['AI / Machine Learning', 'Python', 'Generative AI', 'RAG', 'LangChain', 'Vector Databases', 'Embeddings', 'AI Agents'],
+  ['AI / Machine Learning', 'Python', 'Generative AI', 'RAG', 'LangChain', 'Vector Databases', 'Embeddings', 'AI Agents', 'CNN', 'TensorFlow', 'Pytorch'],
   ['Backend', 'Django', 'Django REST Framework', 'FastAPI', 'REST APIs', 'PostgreSQL', 'Supabase'],
-  ['Frontend', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML / CSS'],
+  ['Frontend', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Flutter'],
   ['Infrastructure', 'Docker', 'AWS', 'Vercel', 'Railway', 'Git', 'GitHub'],
 ]
 
