@@ -22,6 +22,18 @@ export type Certification = {
 export const projects: Project[] = [
   {
     id: '01',
+    name: 'Neuracap',
+    type: 'An AI Integrated Financial Research Platform.',
+    year: '2025 - 2026',
+    tags: 'Next.js · Django REST Framework · MySql · AWS · Aurora RDS · Docker',
+    description: 'During my employment as a Machine Learning Engineer with Jinnah Tech (This product is under the ownership of Jinnah Tech), I have worked on this project. I have build RAG pipelines, AI Assistants, Scraping + AI Research Automatic Pipelines, MySql procedures and Database Management etc.',
+    tone: 'emerald',
+    link: 'https://dev.chat.neuracap.ai/login',
+    websiteLink: 'https://dev.chat.neuracap.ai/login',
+    image: 'https://drive.google.com/file/d/1yx8nisE53_MsRpC4fmnxrcoC4R2T72x3/view?usp=sharing',
+  },
+  {
+    id: '02',
     name: 'Rahat Pharmacy ERP',
     type: 'Pharmacy chain management platform',
     year: '2026',
@@ -33,7 +45,7 @@ export const projects: Project[] = [
     image: 'https://drive.google.com/file/d/1gWQyBM9sPy6gMwtvShjXUNBpyMncAPep/view?usp=sharing',
   },
   {
-    id: '02',
+    id: '03',
     name: 'Salon Flow',
     type: 'Salons Business management',
     year: '2026',
@@ -45,7 +57,7 @@ export const projects: Project[] = [
     image: 'https://drive.google.com/file/d/1NlM-2s45z4--tO0v_L50TUfc4SIq7-iw/view?usp=sharing',
   },
   {
-    id: '03',
+    id: '04',
     name: 'Remote Laboratory Management System',
     type: 'Online Remote Deleivery of samples and test results.',
     year: '2025',
@@ -57,7 +69,7 @@ export const projects: Project[] = [
     image: 'https://drive.google.com/file/d/1GhFcnQasRJEQwJuxmCvoo8O_aHEhabGP/view?usp=sharing',
   },
   {
-    id: '04',
+    id: '05',
     name: 'Cardiologist Portfolio Website',
     type: 'Healthcare portfolio and appointment booking',
     year: '2026',
