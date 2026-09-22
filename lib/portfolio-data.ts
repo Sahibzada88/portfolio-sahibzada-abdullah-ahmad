@@ -155,6 +155,12 @@ export const certifications: Certification[] = [
     issuer: 'W3Schools',
     year: '2021',
     link: 'https://drive.google.com/file/d/1E1TBpacK-pEINGu7JxMbFrsVN1HRYZpY/view?usp=sharing',
+  },  
+  {
+    name: 'AI & Backend Developer Experience Certificate',
+    issuer: 'DATA FUNCTION (SMC-PRIVATE) LIMITED',
+    year: '2026',
+    link: 'https://drive.google.com/file/d/1mvj8mjjH8Z_Eo4erBHeqZ65Iy2ohzmTX/view?usp=sharing',
   },
   {
     name: 'AI/ML Internship Experience Certificate',
