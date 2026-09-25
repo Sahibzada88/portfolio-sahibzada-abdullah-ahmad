@@ -80,6 +80,18 @@ export const projects: Project[] = [
     websiteLink: 'https://cardiologist-portfolio-website.vercel.app',
     image: 'https://drive.google.com/file/d/1uBhfFuuu-x66yh-zVhsHJGGTfREMo-ys/view?usp=sharing',
   },
+  {
+    id: '06',
+    name: 'Pharmacy Management Offline Mode Software',
+    type: 'Medicines Inventory Management and Stock Analysis.',
+    year: '2026',
+    tags: 'React · Python · SQLlite · JWT Licenence',
+    description: 'A high quality and premium cardiology website featuring patient appointment booking, manual call-confirmation workflows, an admin dashboard, heart-health articles, and an interactive heart explorer.',
+    tone: '',
+    link: 'https://github.com/Sahibzada88/pharmacy-offline',
+    websiteLink: 'https://drive.google.com/file/d/1pWu839rYJeHV2HUYioNOCohVvWBP7Dr9/view?usp=sharing',
+    image: 'https://drive.google.com/file/d/1ApUDf_yBvy4EJiH3h9NK06vBAAAYYxMa/view?usp=sharing',
+  },
 ]
 
 // Add your certifications here. They automatically appear in the Certifications section.
