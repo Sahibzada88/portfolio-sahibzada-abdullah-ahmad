@@ -92,6 +92,18 @@ export const projects: Project[] = [
     websiteLink: 'https://drive.google.com/file/d/1pWu839rYJeHV2HUYioNOCohVvWBP7Dr9/view?usp=sharing',
     image: 'https://drive.google.com/file/d/1ApUDf_yBvy4EJiH3h9NK06vBAAAYYxMa/view?usp=sharing',
   },
+  {
+    id: '07',
+    name: 'Digit Sense Software',
+    type: 'Digits Detection Through Computer Vision.',
+    year: '2026',
+    tags: 'React · Python · Pytorch',
+    description: 'A well trained pytocrch based computer vision model for digits detection. Due to heavy deployment and out of resources videos are uploaded.',
+    tone: 'serif',
+    link: 'https://github.com/Sahibzada88/digit-sense',
+    websiteLink: 'https://drive.google.com/file/d/1CDw5eOg9uwpmVX-WbFSQtrdfEhNDpUU-/view?usp=sharing',
+    image: 'https://drive.google.com/file/d/1MuvGVD4hXM0FbToVdq_ot4C9aQW-ECxZ/view?usp=sharing',
+  },
 ]
 
 // Add your certifications here. They automatically appear in the Certifications section.
